@@ -82,6 +82,7 @@ p {
     align-items: center;
     background-color: white;
     padding: 0px 10px;
+    width: 100%;
 }
 
 .tm-site-icon { padding: 10px; color: #999; }
@@ -92,27 +93,43 @@ p {
     font-size: 2rem;
     color: #999;
 }
-
+.tm-main-section-container{
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+}
 .tm-main-bg {
     width: 100%;
-    height: calc(100vh - 200px); 
-    background-image: url(../img/new-vision-01.jpg);
+    min-height:100vh; 
+    background-image: url(../img/welcomebackground.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     overflow: hidden;
     margin: 0;
     padding: 0;
-}
 
+}
+.gap-3{
+    gap:30px;
+}
 .tm-main-section{
     max-width: 600px;
+    width: 100%;
     padding:50px;
     background-color: rgba(255, 255, 255, 0.526);
-    margin-top:100px;
-    margin-left:40px;
+    margin-top:10%;
+    height: fit-content;
 }
-
+@media (max-width: 782px) {
+    .tm-main-section-container {
+        padding:0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+}
 .tm-about-bg { background-image: url(../img/new-vision-02.jpg); }
 .tm-services-bg { background-image: url(../img/new-vision-03.jpg); }
 .tm-contact-bg { background-image: url(../img/new-vision-04.jpg); }
@@ -208,7 +225,9 @@ nav > ul > li { list-style: none; }
     display: inline-block;
     margin-right: -20px;
 }
-
+.tm-welcome-container{
+    padding:40px;
+}
 @media (max-width: 992px) {
     .tm-menu-container {
         position: absolute;
@@ -296,6 +315,7 @@ nav > ul > li { list-style: none; }
     margin-right: 20px;
     width: 55%;
     max-width: 300px;
+    height: 200px;
 }
 
 .tm-media-body {
@@ -367,6 +387,8 @@ nav > ul > li { list-style: none; }
     padding-bottom: 35px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 992px) {
@@ -377,7 +399,6 @@ nav > ul > li { list-style: none; }
     .tm-carousel { max-width: 240px; }
 }
 
-.tm-featured { margin-bottom: 50px; }
 .slick-dots li { width: 30px; }
 .slick-dots li button { width: 30px; }
 
@@ -397,7 +418,9 @@ nav > ul > li { list-style: none; }
 .slick-dots li.slick-active button:before {
     color: #0099ff;
 }
-
+.slick-dots{
+    bottom: 0px !important;
+}
 footer {
     color: #666;
     padding-top: 30px;
@@ -414,144 +437,35 @@ footer a:hover {
 
 /* Hover Effect */
 /* Common style */
-.grid figure {
+.trustedBy{
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 20px;
+
+}
+.trustedBy figure {
   position: relative;
-  float: left;
-  overflow: hidden;
-  margin-left: 20px;
-  margin-right: 20px;
-  background: #3085a3;
+  height: 70px;
+  width: 230px;
   text-align: center;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-    .grid figure {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+.owl-dots{
+    display: none !important;
 }
 
-.grid figure img {
+.trustedBy figure img {
+
   position: relative;
   display: block;
-  min-height: 100%;
-  max-width: 100%;
-  opacity: 0.8;
-}
-
-.grid figure figcaption {
-  padding: 2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-  pointer-events: none;
-}
-
-.grid figure figcaption,
-.grid figure figcaption > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
-
-.grid figure h4 {
-  word-spacing: -0.15em;
-  font-weight: 300;
-}
-
-.grid figure h4 span { font-weight: 800; }
-
-.grid figure h4,
-.grid figure p {
-  margin: 10px 0 0;
-}
-
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
-}
 
 /*---------------*/
 /***** Honey *****/
 /*---------------*/
-
-figure.effect-honey {
-  background: #4a3753;
-  max-width: 240px;
-}
-
-figure.effect-honey img {
-  opacity: 0.9;
-  -webkit-transition: opacity 0.35s;
-  transition: opacity 0.35s;
-}
-
-figure.effect-honey:hover img { opacity: 0.5; }
-
-figure.effect-honey figcaption::before {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: #3496d8;
-  content: "";
-  -webkit-transform: translate3d(0, 10px, 0);
-  transform: translate3d(0, 10px, 0);
-}
-
-figure.effect-honey h4 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1em 1.5em;
-  width: 100%;
-  text-align: left;
-  -webkit-transform: translate3d(0, -30px, 0);
-  transform: translate3d(0, -30px, 0);
-}
-
-figure.effect-honey h4 i {
-  font-style: normal;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0, -30px, 0);
-  transform: translate3d(0, -30px, 0);
-}
-
-figure.effect-honey figcaption::before,
-figure.effect-honey h4 {
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-}
-
-figure.effect-honey:hover figcaption::before,
-figure.effect-honey:hover h4,
-figure.effect-honey:hover h4 i {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
 
 /* Our Company */
 .tm-about { max-width: 975px; }
@@ -581,7 +495,6 @@ figure.effect-honey:hover h4 i {
 /***** Zoe *****/
 /*---------------*/
 
-.grid figure.effect-zoe { background: transparent; }
 
 figure.effect-zoe figcaption {
 	top: auto;
