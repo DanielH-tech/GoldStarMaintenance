@@ -18,17 +18,17 @@ $(document).ready(function () {
       },
       600: {
         // Medium screens (tablets)
-        items: 3,
+        items: 2,
         margin: 15, // Moderate margin for better spacing
       },
       1000: {
         // Large screens
-        items: 4,
+        items: 3,
         margin: 20, // More space between items
       },
       1200: {
         // Extra-large screens
-        items: 5,
+        items: 4,
         margin: 15, // Maximum margin for larger screens
       },
     },

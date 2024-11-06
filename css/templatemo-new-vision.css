@@ -440,8 +440,16 @@ footer a:hover {
 .trustedBy{
     width: 100%;
     box-sizing: border-box; 
-    padding: 20px;
+    padding: 100px;
+    padding-top:  25px; 
 
+
+}
+@media screen and (max-width:950px) {
+    .trustedBy{
+        padding: top 0px; 
+        padding: 25px;
+    }
 }
 .trustedBy figure {
   position: relative;
