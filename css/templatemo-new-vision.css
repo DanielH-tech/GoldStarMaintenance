@@ -149,7 +149,8 @@ p {
     
 }
 .tm-about-bg { background-image: url(../img/new-vision-02.jpg); }
-.tm-services-bg { background-image: url(../img/new-vision-03.jpg); }
+.tm-services-bg { background-image: url(../img/ourservices.jpg);    filter: contrast(1.3);;
+}
 .tm-contact-bg { background-image: url(../img/new-vision-04.jpg); }
 
 @media (max-width: 992px) {
