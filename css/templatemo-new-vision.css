@@ -291,6 +291,9 @@ nav > ul > li { list-style: none; }
 .tm-welcome-row {
     margin-top: 128px;
     margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .tm-welcome-row-2 { margin-bottom: 45px; }
@@ -310,7 +313,9 @@ nav > ul > li { list-style: none; }
 }
 
 .tm-media-v-center { align-items: center; }
-
+.tm-media-article{
+    padding: 10px;
+}
 .tm-media-img {
     margin-right: 20px;
     width: 55%;
@@ -329,7 +334,7 @@ nav > ul > li { list-style: none; }
 
 @media (max-width: 480px) {
     .tm-media { flex-direction: column; }
-    .tm-media-img { width: auto; }
+    .tm-media-img { width: 100%; max-width: 100%; }
     
     .tm-media-body {
         max-width: 300px;
@@ -399,44 +404,6 @@ nav > ul > li { list-style: none; }
     .tm-carousel { max-width: 240px; }
 }
 
-.slick-dots li { width: 30px; }
-.slick-dots li button { width: 30px; }
-
-.slick-dots li button:before {
-    font-family: "Font Awesome 5 Free";
-    font-size: 30px;
-    font-weight: 900;
-    content: "\f068";
-    color: #ddd;
-    opacity: 1;
-    width: 30px;
-    transition: all 0.3s ease;
-}
-
-.slick-dots li button:hover:before, 
-.slick-dots li button:focus:before,
-.slick-dots li.slick-active button:before {
-    color: #0099ff;
-}
-.slick-dots{
-    bottom: 0px !important;
-}
-footer {
-    color: #666;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: right;
-}
-
-footer a { color: #666; }
-
-footer a:hover {
-    color: #09F;
-    text-decoration: none;
-}
-
-/* Hover Effect */
-/* Common style */
 .trustedBy{
     width: 100%;
     box-sizing: border-box; 
