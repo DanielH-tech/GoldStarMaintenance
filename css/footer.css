@@ -1,6 +1,6 @@
 
 :root{
-    --theme-col: #09F;
+    --theme-col: #e9b552;
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
@@ -51,6 +51,7 @@ footer .footer-title{
     border-left: 4px solid var(--theme-col);
     padding-left: 1.5rem;
     height: fit-content;
+    font-weight: bold;
 }
 footer ul{ 
     padding-left: 1.75rem;
@@ -101,13 +102,14 @@ form .g-inp{
     background-color: var(--theme-col);
     border-radius: .25rem;
     font-size: 16px;
-    color: white;
+    color: black;
     font-weight: 500;
     border:none;
     transition: 0.5s;
+    font-weight: bold;
 }
 .f-btn:hover{
-    background-color: rgb(12, 129, 207);
+    background-color: #ba9042;
 }
 #footer-contact-info{
     margin-top: 40px;
