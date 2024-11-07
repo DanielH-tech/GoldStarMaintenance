@@ -512,11 +512,16 @@ nav > ul > li { list-style: none; }
     }
 }
 .tm-company-row{
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+@media screen and (max-width:750px){
+    .tm-company-row{
+        margin-top:200px;
+    }
 }
 .tm-about-1 {
     display: flex;
@@ -584,11 +589,12 @@ nav > ul > li { list-style: none; }
 
 @media (max-width: 768px) {
     .tm-about-1,.tm-aboutus  {
-        flex-direction: column; /* Stack items vertically */
-        height: auto; /* Let the height adjust */
-        padding: 20px;
+        flex-direction: column;
+        height: auto; 
     }
-
+    .tm-aboutus {
+        padding-top:20px;
+    }
     .tm-about-image-wrapper {
         padding-left: 0;
     }
