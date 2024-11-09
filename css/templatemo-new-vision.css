@@ -701,28 +701,56 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 
 .tm-services {
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap onto a new row */
+    gap: 20px; /* Adds space between items */
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-@media (max-width: 768px) {
-    .tm-services { max-width: 510px; }
+.tm-services > div {
+    flex: 1 1 45%; /* Each item takes up about 45% of the row, so only 2 items fit per row */
+    max-width: 700px; /* Ensures items don’t get too wide */
+
 }
 
-.tm-services-img {
-    max-width: 240px;
-    margin: 0 auto 40px;
+@media screen and (max-width: 768px) {
+    .tm-services > div {
+        flex: 1 1 100%; /* Stacks items in a single column on smaller screens */
+        max-width: 100%;
+    }
+    .tm-services div > figure > img{
+        height:200px;
+     }
 }
 
-.tm-service-description {
-    font-size: 1.1rem;
-    color: #09F;
-    text-align: center;
-    margin-top: 20px;
+.tm-services figure{
+   margin-top:20px;
+   width: 100%;
+   max-width: 800px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: white;
+   border-radius: 25px;
+    height: 600px;
+   padding:20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+   box-sizing: border-box;
 }
 
+.tm-services figure img{
+    height:300px;
+ }
+.tm-service-description{
+    height: 100%;
+    max-width: 100%;
+    padding: 20px;
+
+}
 .tm-solid-border {
     border: 1px solid #e9b552;
     padding: 40px;
