@@ -21,8 +21,8 @@ function sendEmail(name, email, message) {
 
   emailjs
     .send(
-      process.env.SERVICE_ID, // PUBLIC_ID from GitHub Secrets
-      process.env.TEMPLATE_ID, // SERVICE_ID from GitHub Secrets
+      SERVICE_ID, // PUBLIC_ID from GitHub Secrets
+      TEMPLATE_ID, // SERVICE_ID from GitHub Secrets
       templateParams
     )
     .then(
@@ -45,7 +45,7 @@ function handleSubmit() {
 
 $(() => {
   emailjs.init({
-    publicKey: process.env.PUBLIC_ID,
+    publicKey: PUBLIC_ID_PLACEHOLDER,
   });
   LoadFooter();
   handleSubmit(); // Bind the form submit event
