@@ -1,4 +1,3 @@
-let emailjs;
 function LoadFooter() {
   // Load the external HTML file into the #footer div
   $("#footer").load(
@@ -12,7 +11,7 @@ function LoadFooter() {
 }
 
 function sendEmail(name, email, message) {
-  $("#sendMessageFromFooter").text("Sending..");
+  $("#sendMessageFromFooter").html("Sending..");
 
   const templateParams = {
     from_name: name,
@@ -24,12 +23,11 @@ function sendEmail(name, email, message) {
     .send(
       process.env.SERVICE_ID_ID, // PUBLIC_ID from GitHub Secrets
       process.env.SERVICE_ID, // SERVICE_ID from GitHub Secrets
-      templateParams,
-      process.env.PUBLIC_ID
+      templateParams
     )
     .then(
       function (response) {
-        $("#sendMessageFromFooter").text("Sent!");
+        $("#sendMessageFromFooter").html("Sent!");
       },
       function (error) {
         alert("Failed to send email. Error: " + error);
@@ -38,18 +36,17 @@ function sendEmail(name, email, message) {
 }
 
 function handleSubmit() {
-  $("#sendMessageFromFooter").on("click", function (e) {
-    e.preventDefault(); // Prevent form from reloading the page
+  const name = $("#footer-name").val();
+  const email = $("#footer-email").val();
+  const message = $("#footer-message").val();
 
-    const name = $("#footer-name").val();
-    const email = $("#footer-email").val();
-    const message = $("#footer-message").val();
-
-    sendEmail(name, email, message); // Pass form values to sendEmail function
-  });
+  sendEmail(name, email, message);
 }
 
 $(() => {
+  emailjs.init({
+    publicKey: process.env.PUBLIC_ID,
+  });
   LoadFooter();
   handleSubmit(); // Bind the form submit event
 });
