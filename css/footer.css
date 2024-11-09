@@ -82,7 +82,7 @@ footer .cr-con{
 .g-i-t{
     flex-grow: 1;
 }
-.g-i-t form{
+.g-i-t #footerForm{
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -90,7 +90,7 @@ footer .cr-con{
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
-form .g-inp{
+#footerForm .g-inp{
     padding: .25rem .5rem;
     font-size: 16px;
 }
