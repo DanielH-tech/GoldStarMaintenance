@@ -22,4 +22,3 @@ jobs:
           PUBLIC_ID: ${{ secrets.PUBLIC_ID }} # Use GitHub secret
           SERVICE_ID: ${{ secrets.SERVICE_ID }} # Use GitHub secret
           TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }} # Use GitHub secret
-        run: node index.js
