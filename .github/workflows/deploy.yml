@@ -16,9 +16,9 @@ jobs:
       - name: Inject secrets into JavaScript
         run: |
           # Replace the placeholders with the actual secrets from GitHub Secrets
-          sed -i 's|PUBLIC_ID_PLACEHOLDER|${{ secrets.PUBLIC_ID }}|g' ./variables.js
-          sed -i 's|SERVICE_ID_PLACEHOLDER|${{ secrets.SERVICE_ID }}|g' ./variables.js
-          sed -i 's|TEMPLATE_ID_PLACEHOLDER|${{ secrets.TEMPLATE_ID }}|g' ./variables.js
+          sed -i 's|PUBLIC_ID_PLACEHOLDER|${{ secrets.PUBLIC_ID }}|g' variables.js
+          sed -i 's|SERVICE_ID_PLACEHOLDER|${{ secrets.SERVICE_ID }}|g' variables.js
+          sed -i 's|TEMPLATE_ID_PLACEHOLDER|${{ secrets.TEMPLATE_ID }}|g' variables.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3 # GitHub Action to deploy to GitHub Pages
