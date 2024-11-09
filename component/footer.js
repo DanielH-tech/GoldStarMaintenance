@@ -21,8 +21,8 @@ function sendEmail(name, email, message) {
 
   emailjs
     .send(
-      process.env.SERVICE_ID_ID, // PUBLIC_ID from GitHub Secrets
-      process.env.SERVICE_ID, // SERVICE_ID from GitHub Secrets
+      process.env.SERVICE_ID, // PUBLIC_ID from GitHub Secrets
+      process.env.TEMPLATE_ID, // SERVICE_ID from GitHub Secrets
       templateParams
     )
     .then(
