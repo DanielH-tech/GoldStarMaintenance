@@ -1,3 +1,7 @@
+const SERVICE_ID = "service_z455hyv";
+const PUBLIC_ID = "PmaHLHkm5f10t3ag9";
+const TEMPLATE_ID = "template_tlhhxd5";
+
 function LoadFooter() {
   // Load the external HTML file into the #footer div
   $("#footer").load(
@@ -45,8 +49,7 @@ function handleSubmit() {
 
 $(() => {
   emailjs.init({
-    publicKey: PUBLIC_ID_PLACEHOLDER,
+    publicKey: PUBLIC_ID,
   });
   LoadFooter();
-  handleSubmit(); // Bind the form submit event
 });
