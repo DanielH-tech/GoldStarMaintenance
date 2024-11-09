@@ -520,7 +520,7 @@ nav > ul > li { list-style: none; }
 }
 @media screen and (max-width:750px){
     .tm-company-row{
-        margin-top:200px;
+        margin-top:50px;
     }
 }
 .tm-about-1 {
@@ -622,19 +622,19 @@ nav > ul > li { list-style: none; }
 }
 
 .tm-services > div {
-    flex: 1 1 45%; /* Each item takes up about 45% of the row, so only 2 items fit per row */
-    max-width: 700px; /* Ensures items don’t get too wide */
+    flex: 1 1 45%; 
+    max-width: 700px; 
+    height: fit-content;
+
 
 }
 
 @media screen and (max-width: 768px) {
     .tm-services > div {
-        flex: 1 1 100%; /* Stacks items in a single column on smaller screens */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
-    .tm-services div > figure > img{
-        height:200px;
-     }
+   
 }
 
 .tm-services figure{
@@ -646,15 +646,15 @@ nav > ul > li { list-style: none; }
    justify-content: center;
    background-color: white;
    border-radius: 25px;
-    height: 600px;
+   min-height: 600px;
    padding:20px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    
    box-sizing: border-box;
 }
 
-.tm-services figure img{
-    height:300px;
+.tm-services img{
+    max-height:300px !important;
  }
 
 .tm-service-description{
@@ -695,17 +695,22 @@ nav > ul > li { list-style: none; }
     position:relative;
     text-align:right;
     height:440px;
-    padding-left: 60px;
-    padding-right: 60px;
     width:100%;
     margin-top:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gmap_canvas {
     overflow:hidden;
     background:none!important;
     height:440px;
-    width:100%;
+    width: 100%;
+    max-width: 1000px;
+}
+.gmap_canvas iframe{
+    width: 100%;
 }
 
 .tm-ul-hyphen li {
@@ -719,30 +724,10 @@ nav > ul > li { list-style: none; }
     margin-right: 5px;
 }
 
-.tm-contact-l,
-.tm-contact-r {
-    padding-left: 75px;
-    padding-right: 75px;
-}
 
-@media (max-width: 992px) {
-    .mapouter,
-    .tm-contact-l,
-    .tm-contact-r,
-    .tm-contact-box {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-}
+
 
 @media (max-width: 768px) {
     .tm-contact-r { margin-top: 50px; }
-    
-    .mapouter,
-    .tm-contact-l,
-    .tm-contact-r,
-    .tm-contact-box {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+
 }
