@@ -1,6 +1,6 @@
-const SERVICE_ID = "service_z455hyv";
-const PUBLIC_ID = "PmaHLHkm5f10t3ag9";
-const TEMPLATE_ID = "template_tlhhxd5";
+const SERVICE_ID = "service_ph4x7in";
+const PUBLIC_ID = "7MCUa8iYDVcOZBSAJ";
+const TEMPLATE_ID = "template_ektwvyo";
 
 function LoadFooter() {
   // Load the external HTML file into the #footer div

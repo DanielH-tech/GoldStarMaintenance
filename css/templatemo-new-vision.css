@@ -731,3 +731,8 @@ nav > ul > li { list-style: none; }
     .tm-contact-r { margin-top: 50px; }
 
 }
+
+/*PRIVACY AND POLICY*/
+.tm-privacy{
+    margin-top:100px
+}
