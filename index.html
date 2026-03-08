@@ -198,6 +198,30 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Office Image Gallery -->
+                    <div class="tm-office-gallery">
+                        <div class="tm-office-gallery-header">
+                            <h3 class="text-golden tm-article-heading">Gallery</h3>
+                            <div class="tm-office-gallery-controls">
+                                <button type="button" class="tm-gallery-arrow tm-gallery-arrow-left" id="tmGalleryPrev" aria-label="Scroll gallery left">
+                                    &#8592;
+                                </button>
+                                <button type="button" class="tm-gallery-arrow tm-gallery-arrow-right" id="tmGalleryNext" aria-label="Scroll gallery right">
+                                    &#8594;
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tm-office-gallery-grid">
+                            <img src="img/GSM pictures/gsmOfficeLobby.jpeg" alt="Gold Star Maintenance office lobby" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsmOfficeMeetingRoom.jpeg" alt="Gold Star Maintenance meeting room" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsm2.jpg" alt="Gold Star Maintenance team at work" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsm3.jpg" alt="Gold Star Maintenance project in progress" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsm4.jpg" alt="Gold Star Maintenance workspace" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsm6.jpg" alt="Gold Star Maintenance equipment and tools" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsm8.jpg" alt="Gold Star Maintenance additional office view" class="tm-office-gallery-img">
+                            <img src="img/GSM pictures/gsmTruck.jpeg" alt="Gold Star Maintenance service truck" class="tm-office-gallery-img">
+                        </div>
+                    </div>
                 </section>
                 <section class="tm-featured">
                     <div class="row">
@@ -240,6 +264,14 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/templatemo-script.js"></script>
         <script src="js/owlCarosel.js"></script>
+        <script src="js/gallery.js"></script>
         <script src="component/footer.js"></script>
+        <!-- Image Modal -->
+        <div class="tm-image-modal" id="tmImageModal">
+            <span class="tm-image-modal-close" id="tmImageModalClose">&times;</span>
+            <div class="tm-image-modal-content">
+                <img src="" alt="" id="tmImageModalImg" class="tm-image-modal-img">
+            </div>
+        </div>
     </body>
 </html>
